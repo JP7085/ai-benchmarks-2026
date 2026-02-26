@@ -1,0 +1,41 @@
+name: Mise à jour mensuelle des benchmarks IA
+
+on:
+  # Exécution automatique le 1er de chaque mois à 9h (UTC)
+  schedule:
+    - cron: '0 9 1 * *'
+  
+  # Permet l'exécution manuelle depuis l'interface GitHub
+  workflow_dispatch:
+
+jobs:
+  update-benchmarks:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout du repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🐍 Configuration Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: 📦 Installation des dépendances
+        run: |
+          pip install requests
+      
+      - name: 🔄 Exécution du script de mise à jour
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+        run: |
+          python update_benchmarks.py
+      
+      - name: 📤 Commit et push des modifications
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Mise à jour automatique des benchmarks - $(date +'%Y-%m-%d')" && git push)
