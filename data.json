@@ -1,0 +1,109 @@
+{
+  "update_date": "2026-02-26",
+  "models": [
+    {
+      "name": "GPT‑5.2 (xhigh)",
+      "vendor": "OpenAI",
+      "type": "proprietary",
+      "mainUsage": ["text", "code"],
+      "intelligence": 92,
+      "mmlu": 87,
+      "coding": 88,
+      "search": 70,
+      "context": 200,
+      "price": 100,
+      "notes": "Fort en codage et raisonnement. Écosystème le plus large (agents, images, vidéo)."
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "vendor": "Anthropic",
+      "type": "proprietary",
+      "mainUsage": ["text", "code", "deep"],
+      "intelligence": 94,
+      "mmlu": 89,
+      "coding": 88,
+      "search": 72,
+      "context": 1000,
+      "price": 90,
+      "notes": "Leader préférence humaine (GDPval‑AA). Excellent en analyse longue et tâches professionnelles."
+    },
+    {
+      "name": "Gemini 3.1 Pro",
+      "vendor": "Google",
+      "type": "proprietary",
+      "mainUsage": ["text", "code", "search"],
+      "intelligence": 95,
+      "mmlu": 92,
+      "coding": 90,
+      "search": 92,
+      "context": 1000,
+      "price": 60,
+      "notes": "Très fort sur ARC‑AGI‑2 et tâches agentiques. Excellent en vidéo et search."
+    },
+    {
+      "name": "Grok 4.1",
+      "vendor": "xAI",
+      "type": "proprietary",
+      "mainUsage": ["text", "search"],
+      "intelligence": 88,
+      "mmlu": 82,
+      "coding": 80,
+      "search": 78,
+      "context": 200,
+      "price": 50,
+      "notes": "Très bon compromis général, avec intégration X/Twitter."
+    },
+    {
+      "name": "Perplexity Sonar‑Reasoning‑Pro",
+      "vendor": "Perplexity",
+      "type": "proprietary",
+      "mainUsage": ["search", "deep", "text"],
+      "intelligence": 90,
+      "mmlu": 85,
+      "coding": 82,
+      "search": 99,
+      "context": 200,
+      "price": 40,
+      "notes": "Co‑#1 Search Arena, #1 SimpleQA F‑score, leader DRACO en Deep Research."
+    },
+    {
+      "name": "Kimi K2.5",
+      "vendor": "Moonshot",
+      "type": "open",
+      "mainUsage": ["text", "code"],
+      "intelligence": 90,
+      "mmlu": 92,
+      "coding": 96,
+      "search": 60,
+      "context": 260,
+      "price": 5,
+      "notes": "Open‑weights S‑tier. Excellent en code, très bon en MMLU. Licence commerciale permissive."
+    },
+    {
+      "name": "DeepSeek V3.2",
+      "vendor": "DeepSeek",
+      "type": "open",
+      "mainUsage": ["text", "code"],
+      "intelligence": 88,
+      "mmlu": 88,
+      "coding": 90,
+      "search": 55,
+      "context": 200,
+      "price": 3,
+      "notes": "Très bon rapport perf/prix, licence MIT. Fort en raisonnement mathématique."
+    },
+    {
+      "name": "GLM‑4.7",
+      "vendor": "Zhipu AI",
+      "type": "open",
+      "mainUsage": ["text", "code"],
+      "intelligence": 87,
+      "mmlu": 86,
+      "coding": 92,
+      "search": 50,
+      "context": 128,
+      "price": 2,
+      "notes": "Open‑source orienté code, très compétitif en LiveCodeBench."
+    }
+  ]
+}
